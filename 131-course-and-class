@@ -1,0 +1,16 @@
+public void createCourseAndClass(String name, String description) {
+    // code here
+    apxio__Course__c courceRecord = new apxio__Course__c();
+    courceRecord.Name = name;
+    courceRecord.apxio__Course_Details__c =description;
+    insert courceRecord;
+
+    apxio__Class__c courceRecordChild = new apxio__Class__c ();
+    courceRecordChild.apxio__Course__c = courceRecord.Id;
+    courceRecordChild.Name = name;
+    courceRecordChild.apxio__Description__c= description?.left(255);
+    insert courceRecordChild;
+
+
+
+}
