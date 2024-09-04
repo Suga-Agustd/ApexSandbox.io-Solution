@@ -1,0 +1,14 @@
+public Integer diff(Integer a, Integer b) {
+   //code here
+Integer p = -1;
+Integer result = 0 ;
+
+    result = a - b;
+
+    if (result < 0)
+    {
+        result = result * p ;
+    }
+
+    Return result ;
+}
